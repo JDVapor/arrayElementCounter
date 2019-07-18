@@ -1,17 +1,17 @@
 function elementOccCounter(array) {
   const uArray = [...new Set(array)];
   const arrayCounts = [];
-  uArray.forEach(num => {
-    const numTest = num;
+  uArray.forEach(element => {
+    const elementTest = element;
     let count = 0;
-    array.forEach(num => {
-      if (num === numTest) {
+    array.forEach(element => {
+      if (element === elementTest) {
         count++
       }
     })
     if (count > 1) {
       arrayCounts.push({
-        [numTest]: count
+        [elementTest]: count
       });
     }
   })
